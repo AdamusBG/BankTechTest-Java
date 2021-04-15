@@ -11,6 +11,8 @@ public class Transaction {
     private final double balance;
     private final int numberInDay;
 
+    // can reduce this to a single constructor if account class always passes date
+
     public Transaction(double movement, double balance, int numberInDay) {
         this.date = Calendar.getInstance();
         this.movement = movement;
