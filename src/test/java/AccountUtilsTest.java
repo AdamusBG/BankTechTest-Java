@@ -19,4 +19,22 @@ public class AccountUtilsTest {
         assertFalse(AccountUtils.isValidDate("35/05/2021"));
         assertFalse(AccountUtils.isValidDate("03/14/2021"));
     }
+
+    @Test
+    void returnsTrueWhenResultBalanceAboveZero_enoughForWithdrawal() {
+        assertTrue(AccountUtils.enoughForWithdrawal(150.00, 34.27));
+        assertTrue(AccountUtils.enoughForWithdrawal(99.99, 42.19));
+    }
+
+    @Test
+    void returnsTrueWhenResultBalanceZero_enoughForWithdrawal() {
+        assertTrue(AccountUtils.enoughForWithdrawal(150.00, 150.00));
+        assertTrue(AccountUtils.enoughForWithdrawal(99.99, 99.99));
+    }
+
+    @Test
+    void returnsFalseWhenResultBalanceBelowZero_enoughForWithdrawal() {
+        assertFalse(AccountUtils.enoughForWithdrawal(150.00, 162.75));
+        assertFalse(AccountUtils.enoughForWithdrawal(99.99, 100.00));
+    }
 }
