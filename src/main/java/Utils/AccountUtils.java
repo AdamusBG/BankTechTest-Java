@@ -15,4 +15,8 @@ public class AccountUtils {
         }
         return true;
     }
+
+    public static boolean enoughForWithdrawal(double balance, double amount) {
+        return balance - amount >= 0;
+    }
 }
