@@ -1,5 +1,6 @@
 package Entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static java.lang.Integer.parseInt;
@@ -27,6 +28,11 @@ public class Transaction {
 
     public Calendar getDate() {
         return this.date;
+    }
+
+    public String getDateAsString() {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        return formatter.format(this.date.getTime());
     }
 
     public double getMovement() {
