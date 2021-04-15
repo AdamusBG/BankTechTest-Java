@@ -20,6 +20,13 @@ public class TransactionTest {
     }
 
     @Test
+    void correctlyGetsDateAfterInitialization_getDateAsString() {
+        initializeTestTransaction();
+
+        assertEquals("14/04/2021", testTransaction.getDateAsString());
+    }
+
+    @Test
     void correctlyGetsMovementAfterInitialization_getMovement() {
         initializeTestTransaction();
 
