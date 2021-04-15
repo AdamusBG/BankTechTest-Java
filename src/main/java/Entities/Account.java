@@ -38,9 +38,4 @@ public class Account {
         // actually reduce balance, maybe by calling private method
         // add a transaction object to arraylist
     }
-
-
-
-
-
 }
