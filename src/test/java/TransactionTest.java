@@ -64,13 +64,13 @@ public class TransactionTest {
         // sorting call
         transactionList.sort(new TransactionComparator());
 
-        // testing that sorting has worked correctly
-        assertEquals(10.00, transactionList.get(0).getMovement());
-        assertEquals(20.00, transactionList.get(1).getMovement());
-        assertEquals(30.00, transactionList.get(2).getMovement());
-        assertEquals(40.00, transactionList.get(3).getMovement());
-        assertEquals(50.00, transactionList.get(4).getMovement());
-        assertEquals(60.00, transactionList.get(5).getMovement());
+        // testing that sorting has worked correctly, should be reverse chronological
+        assertEquals(60.00, transactionList.get(0).getMovement());
+        assertEquals(50.00, transactionList.get(1).getMovement());
+        assertEquals(40.00, transactionList.get(2).getMovement());
+        assertEquals(30.00, transactionList.get(3).getMovement());
+        assertEquals(20.00, transactionList.get(4).getMovement());
+        assertEquals(10.00, transactionList.get(5).getMovement());
     }
 
 
