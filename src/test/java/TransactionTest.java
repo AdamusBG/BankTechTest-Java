@@ -80,8 +80,6 @@ public class TransactionTest {
         assertEquals(10.00, transactionList.get(5).getMovement());
     }
 
-
-
     private void initializeTestTransaction() {
         this.testTransaction = new Transaction("14/04/2021", 123.45, 1230.50, 3);
     }
