@@ -6,9 +6,16 @@ This program simulates a simple bank account. It allows money to be added and wi
 
 ## Instructions for usage
 
-Open your terminal and navigate to a directory in which you would like to save this repo to, then enter the following commands:  
+Open your terminal and navigate to a directory in which you would like to save this repo to, then enter the following command:
 
---to add later---
+```
+$ git clone https://github.com/AdamusBG/BankTechTest-Java.git
+$ cd BankTechTest-Java
+$ mvn compile
+$ mvn exec:java -Dexec.mainClass=Main
+```
+
+This will clone the repository to your machine and cause the example usage of the program, seen in Main, to be run.  
 
 ## Specification
 
