@@ -40,7 +40,7 @@ Below is the initially planned class diagram.
 
 ## Code quality
 
---to add later--
+In a terminal window, navigate into this directory and enter `mvn test`. This will run the suite of 26 tests which ensure the program works as expected. Note that you will need to have Maven installed to run these tests.  
 
 The program is written to account for the following edge cases, with test coverage proving:
 * Negative withdrawals and deposits are blocked.  
