@@ -1,11 +1,11 @@
-import Services.AccountPrinter;
 import Entities.Transaction;
+import Services.AccountPrinter;
 import Utils.TransactionComparator;
 
 import java.util.ArrayList;
-import org.junit.jupiter.api.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
