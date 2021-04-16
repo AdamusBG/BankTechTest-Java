@@ -1,11 +1,11 @@
 import Entities.Account;
+import Entities.Transaction;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
-
-import Entities.Transaction;
 import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
