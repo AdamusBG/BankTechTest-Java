@@ -1,6 +1,7 @@
 package Entities;
 
 import Utils.AccountUtils;
+import Services.AccountPrinter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -31,18 +32,15 @@ public class Account {
 
     public void withdraw(String date, double amount) {
         if (!AccountUtils.isValidDate(date)) {
-            System.out.println(String.format("The given date of '%s' is invalid, please provide a valid date in format dd/mm/yyyy", date));
-            System.out.println("This transaction has been cancelled");
+            AccountPrinter.printIncorrectDateMessage(date);
             return;
         }
         if (amount < 0) {
-            System.out.println("The amount must be positive");
-            System.out.println("This transaction has been cancelled");
+            AccountPrinter.printAmountMustBePositive();
             return;
         }
         if (!AccountUtils.enoughForWithdrawal(this.balance, amount)) {
-            System.out.println("There is not enough balance to process this transaction");
-            System.out.println("This transaction has been cancelled");
+            AccountPrinter.printNotEnoughBalance();
             return;
         }
         changeBalance(-1 * amount);
@@ -56,13 +54,11 @@ public class Account {
 
     public void deposit(String date, double amount) {
         if (!AccountUtils.isValidDate(date)) {
-            System.out.println(String.format("The given date of '%s' is invalid, please provide a valid date in format dd/mm/yyyy", date));
-            System.out.println("This transaction has been cancelled");
+            AccountPrinter.printIncorrectDateMessage(date);
             return;
         }
         if (amount < 0) {
-            System.out.println("The amount must be positive");
-            System.out.println("This transaction has been cancelled");
+            AccountPrinter.printAmountMustBePositive();
             return;
         }
         changeBalance(amount);
