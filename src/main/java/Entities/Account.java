@@ -1,7 +1,8 @@
 package Entities;
 
-import Utils.AccountUtils;
 import Services.AccountPrinter;
+import Utils.AccountUtils;
+import Utils.TransactionComparator;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -65,6 +66,11 @@ public class Account {
         recordTransaction(date, amount);
     }
 
+    public void statement() {
+        sortTransactions();
+        AccountPrinter.printStatement(this.transactions);
+    }
+
     private void changeBalance(double amount) {
         int minorUnitAmount = (int) (amount * 100);
         this.balance += minorUnitAmount;
@@ -84,5 +90,9 @@ public class Account {
             }
         }
         return transactionsOnDate;
+    }
+
+    private void sortTransactions() {
+        this.transactions.sort(new TransactionComparator());
     }
 }
