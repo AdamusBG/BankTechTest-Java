@@ -17,6 +17,8 @@ $ mvn exec:java -Dexec.mainClass=Main
 
 This will clone the repository to your machine and cause the example usage of the program, seen in Main, to be run.  
 
+Note that you will need to have Maven installed for these commands to work.  
+
 ## Specification
 
 I have adapted the full specification (found [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md)) into a number of user stories and the class diagram below.
