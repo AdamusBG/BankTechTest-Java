@@ -12,17 +12,11 @@ public class Transaction {
     private final double balance;
     private final int numberInDay;
 
-    // can reduce this to a single constructor if account class always passes date
-
-    public Transaction(double movement, double balance, int numberInDay) {
+    public Transaction(String transactionDate, double movement, double balance, int numberInDay) {
         this.date = Calendar.getInstance();
         this.movement = movement;
         this.balance = balance;
         this.numberInDay = numberInDay;
-    }
-
-    public Transaction(String transactionDate, double movement, double balance, int numberInDay) {
-        this(movement, balance, numberInDay);
         setDate(transactionDate);
     }
 
@@ -48,7 +42,6 @@ public class Transaction {
     }
 
     private void setDate(String transactionDate) {
-        // Could check date here
         String[] parts = transactionDate.split("/");
         this.date.set(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
     }
